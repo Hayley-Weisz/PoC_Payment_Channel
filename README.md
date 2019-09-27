@@ -5,9 +5,9 @@ Tachyon Protocol will use bytes as the equivalent measurement as bandwidth and u
 
 ## Let’s say if A is buying bandwidth and is matched to B by XOR operator
 
-- A expects to use nMB bandwidth
+- A expects to use traffic
 - A and B negotiate the Trading channel
-  - A puts nMB bandwidth worth of token m as the security deposit, set the bandwidth/token exchange rate and packet loss i, then writes [nMB, Price(/MB), Token(m), Packet Loss(i)] into the smart contract, and pays for smart contract fee;
+  - A puts traffic worth of token m as the security deposit, set the bandwidth/token exchange rate and packet loss i, then writes [nMB, Price(/MB), Token(m), Packet Loss(i)] into the smart contract, and pays for smart contract fee;
   - A receives a channel ID and notify B to confirm this ID;
   - B looks up the ID and verify the channel information, then confirms Payment channel and pays for smart contract fee;
 
@@ -30,11 +30,11 @@ Tachyon Protocol will use bytes as the equivalent measurement as bandwidth and u
 
 - Assume client node A wishes to establish a connection with provider C through provider B:
 
-- A expects to use nMB bandwidth from B and C;
-  - A negotiates with B to create Payment channel, and puts nMB bandwidth worth of security deposit token m into Payment channel from account balance;
+- A expects to use traffic from B and C;
+  - A negotiates with B to create Payment channel, and puts traffic worth of security deposit token m into Payment channel from account balance;
   - B verifies Payment channel and establishes connection with A;
-  - The smart contract locks 110%*(nMB bandwidth worth of) tokens m in node F, then request F to establish the connection between B and C and use nMB bandwidth from C;
-  - Node F negotiates with C to create payment channel, and puts nMB bandwidth worth of security deposit Token m into Payment channel from account balance;
+  - The smart contract locks 110%*(traffic worth of) tokens m in node F, then request F to establish the connection between B and C and use traffic from C;
+  - Node F negotiates with C to create payment channel, and puts traffic worth of security deposit Token m into Payment channel from account balance;
   - C verifies Payment channel, establishes the connection with B; F then sends C the traffic characteristics of A(hash value of A’s ID and timestamp);
   - After bandwidth is used, A pays B m tokens; node F pays C m tokens, and take extra 10% m tokens as process fee.
 
