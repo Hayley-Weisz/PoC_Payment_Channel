@@ -47,3 +47,4 @@ The frequent confirmations and information exchanges are the key to prevent frau
  - The cheating threshold - Packet Loss(i) can be negotiated by both parties. If the threshold is relatively low, the cheating party would not cause a serious loss on the other party.
  - No third party arbitration commission. For arbitration commission to work properly, it will require surveillance of the network, which contradicts our privacy-oriented and surveillance-free belief, and it may also introduce security vulnerabilities.
  - This implementation will ensure the connection between multiple nodes without compromising the route and transaction records.
+  
